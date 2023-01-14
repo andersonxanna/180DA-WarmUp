@@ -60,7 +60,7 @@ while(True):
     clt = KMeans(n_clusters=3) #KMeans
     clt.fit(img)
 
-    # plot historgram
+    # plot histogram
     hist = find_histogram(clt)
     bar = plot_colors2(hist, clt.cluster_centers_)
     plt.axis("off")
