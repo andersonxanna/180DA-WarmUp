@@ -20,6 +20,9 @@ player_score = 0
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
+green = (0, 255, 0)
+blue = (0, 0, 128)
+
 # Create the screen object
 # The size is determined by the constant SCREEN_WIDTH and SCREEN_HEIGHT
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -30,12 +33,27 @@ sciss_img = pygame.image.load("scissors.png").convert()
 
 pygame.display.set_caption('Show Text')
 
-Font=pygame.font.SysFont('timesnewroman',  30)
+font=pygame.font.SysFont('freesansbold.ttf',  30)
+
+text = font.render('Rock, paper, scissors!', True, blue, (255,255,255))
+
+# create a rectangular object for the
+# text surface object
+textRect = text.get_rect()
+
+# set the center of the rectangular object.
+textRect.center = ((SCREEN_WIDTH // 2), (SCREEN_HEIGHT // 2 + SCREEN_HEIGHT//4))
 
 running = True
 while running:
     # Did the user click the window close button?
     screen.fill((255, 255, 255))
+ 
+    # copying the text surface object
+    # to the display surface object
+    # at the center coordinate.
+    screen.blit(text, textRect)
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
