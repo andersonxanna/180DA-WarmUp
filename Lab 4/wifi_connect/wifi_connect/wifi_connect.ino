@@ -1,15 +1,16 @@
 #include <WiFi.h>
+#include "arduino_secrets.h"
 
 // WiFi network name and password:
-const char * networkName = "YOUR_NETWORK_HERE";
-const char * networkPswd = "YOUR_PASSWORD_HERE";
+const char * networkName = SECRET_SSID;
+const char * networkPswd = SECRET_PASS;
 
 // Internet domain to request from:
 const char * hostDomain = "example.com";
 const int hostPort = 80;
 
 const int BUTTON_PIN = 0;
-const int LED_PIN = 13;
+const int LED_PIN = 2;
 
 void setup()
 {
