@@ -10,7 +10,7 @@ const char * hostDomain = "example.com";
 const int hostPort = 80;
 
 const int BUTTON_PIN = 0;
-const int LED_PIN = 13;
+const int LED_PIN = 2;
 
 void setup()
 {

@@ -1,4 +1,7 @@
-int ledPin = 2;
+/*
+From https://learn.sparkfun.com/tutorials/esp32-s2-thing-plus-hookup-guide/all 
+*/
+int ledPin = 2; //Pin on my esp32 for onboard LED
 
 void setup()
 {
